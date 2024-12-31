@@ -1,0 +1,31 @@
+{
+    "name": "sulaimanmisri/easy-login",
+    "description": "A simple Laravel Socialite wrapper for multiple OAuth",
+    "license": "MIT",
+    "minimum-stability": "stable",
+
+    "authors": [
+        {
+            "name": "Muhamad Sulaiman Misri",
+            "homepage": "https://sulaimanmisri.com"
+        }
+    ],
+    
+    "require": {
+        "php": "^8.3",
+        "laravel/socialite": "^5.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "SulaimanMisri\\EasyLogin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SulaimanMisri\\EasyLogin\\EasyLoginServiceProvider"
+            ]
+        }
+    }
+}
