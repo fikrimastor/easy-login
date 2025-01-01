@@ -2,7 +2,7 @@
     "name": "sulaimanmisri/easy-login",
     "description": "A simple Laravel Social Login for your Laravel application.",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Muhamad Sulaiman Misri",
