@@ -10,7 +10,7 @@ class EasyLoginServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot() : void
     {
         $this->mergeConfigToServices();
 
@@ -24,7 +24,7 @@ class EasyLoginServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register() : void
     {
         $this->mergeConfigFrom(__DIR__ . '/config/easy-login.php', 'easy-login');
     }
@@ -32,7 +32,7 @@ class EasyLoginServiceProvider extends ServiceProvider
     /**
      * Merge EasyLogin settings into config/services.php
      */
-    protected function mergeConfigToServices()
+    protected function mergeConfigToServices() : void
     {
         $this->mergeConfigFrom(__DIR__ . '/config/easy-login.php', 'services');
 
@@ -46,7 +46,7 @@ class EasyLoginServiceProvider extends ServiceProvider
     /**
      * Handle Laravel Socialite installation check
      */
-    public function checkLaravelSocialiteInstallation()
+    public function checkLaravelSocialiteInstallation() : void
     {
         if (!class_exists('Laravel\Socialite\SocialiteServiceProvider')) {
             throw new RuntimeException(
