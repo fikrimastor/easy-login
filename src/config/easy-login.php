@@ -29,6 +29,15 @@ return [
     ],
 
     /**
+     * Define the Twitter @ X OAuth credentials
+     */
+    'twitter' => [
+        'client_id' => env('TWITTER_CLIENT_ID'),
+        'client_secret' => env('TWITTER_CLIENT_SECRET'),
+        'redirect' => env('TWITTER_REDIRECT_URI'),
+    ],
+
+    /**
      * Define the default redirect paths
      */
     'redirects' => [

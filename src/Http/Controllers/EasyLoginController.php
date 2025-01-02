@@ -12,7 +12,7 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Github Authentication page
      */
-    public function handleGithubRedirect() : RedirectResponse
+    public function handleGithubRedirect(): RedirectResponse
     {
         return Socialite::driver('github')->redirect();
     }
@@ -20,7 +20,7 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Google Authentication page
      */
-    public function handleGoogleRedirect() : RedirectResponse
+    public function handleGoogleRedirect(): RedirectResponse
     {
         return Socialite::driver('google')->redirect();
     }
@@ -28,15 +28,23 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Facebook Authentication page
      */
-    public function handleFacebookRedirect() : RedirectResponse
+    public function handleFacebookRedirect(): RedirectResponse
     {
         return Socialite::driver('facebook')->redirect();
     }
 
     /**
+     * Redirect user to the Twitter @ X Authentication page
+     */
+    public function handleTwitterRedirect(): RedirectResponse
+    {
+        return Socialite::driver('twitter-oauth-2')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
-    public function callback(CallbackServices $callbackServices) : RedirectResponse
+    public function callback(CallbackServices $callbackServices): RedirectResponse
     {
         $provider = Socialite::driver(request()->provider)->user();
         $user = $callbackServices->getUserEmailFrom($provider);

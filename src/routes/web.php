@@ -15,6 +15,9 @@ Route::get('/auth/google/redirect', [EasyLoginController::class, 'handleGoogleRe
 Route::get('/auth/facebook/redirect', [EasyLoginController::class, 'handleFacebookRedirect'])
     ->name('easy-login.facebook');
 
+Route::get('/auth/twitter/redirect', [EasyLoginController::class, 'handleTwitterRedirect'])
+    ->name('easy-login.twitter');
+
 /**
  * Provider Callback Routes
  */
