@@ -9,7 +9,7 @@ Easy Login is a Laravel package designed to simplify OAuth authentication using 
 
 1. Install the package via Composer
 ```bash
-composer require sulaimanmisri/easy-login
+composer require sulaimanmisri/easy-login:dev-alpha-x
 ```
 
 2. Publish the configuration file:
@@ -34,7 +34,7 @@ If you encounter an Error related to Laravel `Session Start`, you can add this m
 ```
 $middleware->append(StartSession::class);
 ```
-> [!ERROR]
+> [!CAUTION]
 > If you encounter other errors, please open a ticket and give us the details of the error.
 
 ## Usage
@@ -55,6 +55,8 @@ After you finish the installation and modify the `easy-login` config, you can us
 * easy-login.github
 * easy-login.google
 * easy-login.facebook
+* easy-login.twitter
+* More to coming!
 
 ## Auth Session
 This package comes with Success and Failed login mechanisms. When a user tries to login via any selected Social Login and their email is not found in your DB, they will be redirected to the path set in the config, where you can display a custom message.
@@ -82,10 +84,11 @@ Easily connect your application to providers like GitHub, Google, and more throu
 #### 2. Simple Configuration
 Manage OAuth providers in a single configuration file.
 
-#### 3. Pre-Built Routes
+#### 3. Pre-Built Routes & Components
 Automatically provides routes for:
 * Redirecting to OAuth providers (e.g., GitHub)
 * Handling authentication callbacks
+* Laravel blade component (coming soon)
 
 #### 4. Customizable Behavior
 Extend or override the config data or callback logic easily using the CallbackServices class.
