@@ -29,6 +29,14 @@ GITHUB_REDIRECT_URL=https://your-app.com/auth/{provider}/callback
 
 That's it for the installation.
 
+## Laravel Error
+If you encounter an Error related to Laravel `Session Start`, you can add this middleware inside your Laravel `bootstrap/app.php` file.
+```
+$middleware->append(StartSession::class);
+```
+> [!ERROR]
+> If you encounter other errors, please open a ticket and give us the details of the error.
+
 ## Usage
 You can modify the post-login redirect paths in the `config/easy-login.php` file:
 ```
