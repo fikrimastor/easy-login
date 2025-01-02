@@ -3,7 +3,7 @@
 namespace SulaimanMisri\EasyLogin\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Laravel\Socialite\Facades\Socialite;
 use SulaimanMisri\EasyLogin\Http\Services\CallbackServices;
 
@@ -12,7 +12,7 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Github Authentication page
      */
-    public function handleGithubRedirect()
+    public function handleGithubRedirect() : RedirectResponse
     {
         return Socialite::driver('github')->redirect();
     }
@@ -20,7 +20,7 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Google Authentication page
      */
-    public function handleGoogleRedirect()
+    public function handleGoogleRedirect() : RedirectResponse
     {
         return Socialite::driver('google')->redirect();
     }
@@ -28,7 +28,7 @@ class EasyLoginController extends Controller
     /**
      * Redirect user to the Facebook Authentication page
      */
-    public function handleFacebookRedirect()
+    public function handleFacebookRedirect() : RedirectResponse
     {
         return Socialite::driver('facebook')->redirect();
     }
@@ -36,7 +36,7 @@ class EasyLoginController extends Controller
     /**
      * Handle application callback after authentication
      */
-    public function callback(CallbackServices $callbackServices)
+    public function callback(CallbackServices $callbackServices) : RedirectResponse
     {
         $provider = Socialite::driver(request()->provider)->user();
         $user = $callbackServices->getUserEmailFrom($provider);

@@ -4,6 +4,7 @@ namespace SulaimanMisri\EasyLogin\Http\Services;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 
 class CallbackServices
 {
@@ -18,7 +19,7 @@ class CallbackServices
     /**
      * Stop the execution if the user is not exists
      */
-    public function stopExecutionIfTheUserIsNotExists()
+    public function stopExecutionIfTheUserIsNotExists() : RedirectResponse
     {
         return redirect(config('easy-login.redirects.failure'))
             ->with(
@@ -30,7 +31,7 @@ class CallbackServices
      /**
      * Handle the success auth from the provider logic
      */
-    public function successAuth($user)
+    public function successAuth($user) : RedirectResponse
     {
         session()->flash('easy-success', config('easy-login.success_message'));
         Auth::login($user);
