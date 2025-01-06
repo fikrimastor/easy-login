@@ -5,11 +5,11 @@ Easy Login is a Laravel package designed to simplify OAuth authentication using 
 
 ## Installation
 > [!IMPORTANT]
-> Before you install this package, you need to install Laravel Socialite first. Read the [Laravel Socialite Documentation](https://laravel.com/docs/10.x/socialite)
+> Before you install this package, you need to install Laravel Socialite first. Read the [Laravel Socialite Documentation](https://laravel.com/docs/master/socialite)
 
 1. Install the package via Composer
 ```bash
-composer require sulaimanmisri/easy-login:dev-alpha-x
+composer require sulaimanmisri/easy-login
 ```
 
 2. Publish the configuration file:
@@ -29,14 +29,6 @@ GITHUB_REDIRECT_URL=https://your-app.com/auth/{provider}/callback
 
 That's it for the installation.
 
-## Laravel Error
-If you encounter an Error related to Laravel `Session Start`, you can add this middleware inside your Laravel `bootstrap/app.php` file.
-```
-$middleware->append(StartSession::class);
-```
-> [!CAUTION]
-> If you encounter other errors, please open a ticket and give us the details of the error.
-
 ## Usage
 You can modify the post-login redirect paths in the `config/easy-login.php` file:
 ```
@@ -51,11 +43,19 @@ After you finish the installation and modify the `easy-login` config, you can us
 <a href="{{ route('easy-login.github') }}"> Login via Github </a>
 ```
 
+or
+
+```blade
+<a href="{{ route('easy-login.azure') }}"> Login via Azure </a>
+```
+
+
 #### List of pre-defined Route Names
 * easy-login.github
 * easy-login.google
 * easy-login.facebook
 * easy-login.twitter
+* easy-login.azure
 * More to coming!
 
 ## Auth Session
@@ -84,11 +84,10 @@ Easily connect your application to providers like GitHub, Google, and more throu
 #### 2. Simple Configuration
 Manage OAuth providers in a single configuration file.
 
-#### 3. Pre-Built Routes & Components
+#### 3. Pre-Built Routes
 Automatically provides routes for:
 * Redirecting to OAuth providers (e.g., GitHub)
 * Handling authentication callbacks
-* Laravel blade component (coming soon)
 
 #### 4. Customizable Behavior
 Extend or override the config data or callback logic easily using the CallbackServices class.
