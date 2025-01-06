@@ -17,6 +17,14 @@ class CallbackServices
     }
 
     /**
+     * Get the user email in Azure
+     */
+    public function getUserEmailFromAzure($provider)
+    {
+        return User::where('email', $provider['mail'])->first();
+    }
+
+    /**
      * Stop the execution if the user is not exists
      */
     public function stopExecutionIfTheUserIsNotExists() : RedirectResponse
