@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SulaimanMisri\EasyLogin\Http\Services;
 
 use App\Models\User;
@@ -27,7 +29,7 @@ class CallbackServices
     /**
      * Stop the execution if the user is not exists
      */
-    public function stopExecutionIfTheUserIsNotExists() : RedirectResponse
+    public function stopExecutionIfTheUserIsNotExists(): RedirectResponse
     {
         return redirect(config('easy-login.redirects.failure'))
             ->with(
@@ -36,10 +38,10 @@ class CallbackServices
             );
     }
 
-     /**
+    /**
      * Handle the success auth from the provider logic
      */
-    public function successAuth($user) : RedirectResponse
+    public function successAuth($user): RedirectResponse
     {
         session()->flash('easy-success', config('easy-login.success_message'));
         Auth::login($user);

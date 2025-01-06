@@ -1,13 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SulaimanMisri\EasyLogin\Http\Services;
 
-use Illuminate\Http\Client\Response;
 use Illuminate\Http\Request;
+use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\RedirectResponse;
+use SulaimanMisri\EasyLogin\Http\Services\EasyLoginServices;
 
-class AzureServices
+class AzureServices implements EasyLoginServices
 {
     /**
      * Redirect user to the Azure Authentication page

@@ -92,11 +92,49 @@ Automatically provides routes for:
 #### 4. Customizable Behavior
 Extend or override the config data or callback logic easily using the CallbackServices class.
 
-## Customization
-If you need to customize the behavior (e.g., mapping user data or handling errors), use the `CallbackServices` class provided by the package. Extend the class to implement custom logic for:
-* Handling user data retrieval
-* Stopping execution if a user does not exist
-
 ## Contributing
 Feel free to contribute to this package by submitting issues or pull requests. Follow the standard coding guidelines for consistency.
+
+## Developer Customization
+You might want to use `Easy Login` as your primary Social Login, but the provider is not there. You can contribute to this Package too! By default, you need to follow other Provider Redirection inside the `EasyLoginController`.
+
+But, if you find that the provider you want is not supported by Laravel Socialite by default, you can create a custom Controller by naming the file like so : `EasyLoginForWhatProviderNameController`. Change the `WhatProviderName` to your own provider name. Eg : `EasyLoginForMySpaceController`
+
+Then, create a Service file inside the `Services` and follow the naming convention. Like so : `YourProviderServices`. 
+
+To use the `EasyLoginServices` interface, implement it in your services class and provide concrete implementations for the required methods. Your services must implement the `EasyLoginServices`.
+
+## Coding Standards
+To maintain consistency and quality across the codebase, please adhere to the following coding standards when contributing to this project.
+
+#### 1. Strict Typing
+* Always declare strict_types=1 at the top of every PHP file.
+* Use return type declarations for all methods.
+* Use type hints for all method parameters.
+
+#### 2. Namespace and Class Naming
+* Follow PSR-4 autoloading standards.
+* Follow PSR-12 coding style guidelines.
+* Use PascalCase for class and interface names.
+* Namespaces should match the directory structure.
+
+#### 3. Method Naming
+* Use camelCase for method names.
+* Method names should be descriptive and reflect their purpose.
+
+#### 4. Comments and Documentation
+* Use PHPDoc blocks to document all classes, methods, and properties.
+* Include a description, parameter details, return types, and exceptions (if any).
+* Keep comments concise but informative. Or at least a room for the code to "breath"
+
+#### 5. Commit Messages
+* Use clear and descriptive commit messages.
+* Follow the Conventional Commits format:
+```
+- Add MySpace Login
+- Fix Provider not found
+```
+
+## Final Notes
+By following these coding standards, we can ensure that the codebase remains clean, consistent, and easy to maintain. If you have any questions or need clarification, feel free to open an issue or reach out to the maintainers.
 
