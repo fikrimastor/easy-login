@@ -24,8 +24,8 @@ Route::get('/auth/twitter/redirect', [EasyLoginController::class, 'handleTwitter
 Route::get('/auth/azure/redirect', [EasyLoginForAzureController::class, 'handleAzureRedirect'])
     ->name('easy-login.azure');
 
-Route::get('/auth/one-login/redirect', [EasyLoginForAzureController::class, 'handleOneLoginRedirect'])
-    ->name('easy-login.one-login');
+Route::get('/auth/onelogin/redirect', [EasyLoginForAzureController::class, 'handleOneLoginRedirect'])
+    ->name('easy-login.onelogin');
 
 
 /**

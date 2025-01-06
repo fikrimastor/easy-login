@@ -46,7 +46,7 @@ class EasyLoginController extends Controller
      */
     public function handleOneLoginRedirect(): RedirectResponse
     {
-        return Socialite::driver('one-login')->redirect();
+        return Socialite::driver('onelogin')->redirect();
     }
 
     /**
