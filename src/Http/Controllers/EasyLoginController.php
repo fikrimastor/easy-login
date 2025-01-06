@@ -42,6 +42,14 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the One Login Authentication page
+     */
+    public function handleOneLoginRedirect(): RedirectResponse
+    {
+        return Socialite::driver('one-login')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse

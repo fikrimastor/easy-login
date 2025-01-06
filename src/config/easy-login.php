@@ -49,6 +49,16 @@ return [
     ],
 
     /**
+     * Define the One Login OAuth credentials
+     */
+    'onelogin' => [
+        'client_id' => env('ONE_LOGIN_CLIENT_ID'),
+        'client_secret' => env('ONE_LOGIN_CLIENT_SECRET'),
+        'redirect' => env('ONE_LOGIN_REDIRECT_URI'),
+        'base_url' => env('ONE_LOGIN_BASE_URL'),
+    ],
+
+    /**
      * Define the default redirect paths
      */
     'redirects' => [
