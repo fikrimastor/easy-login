@@ -56,6 +56,8 @@ or
 * easy-login.twitter
 * easy-login.azure
 * easy-login.linkedin
+* easy-login.slack
+* easy-login.bitbucket
 * More to coming!
 
 ## Auth Session

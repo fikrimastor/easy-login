@@ -60,6 +60,14 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the Bitbucket Authentication page
+     */
+    public function handleBitbucketRedirect(): RedirectResponse
+    {
+        return Socialite::driver('bitbucket')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse

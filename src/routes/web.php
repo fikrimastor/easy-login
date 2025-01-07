@@ -27,6 +27,9 @@ Route::get('/auth/linkedin-openid/redirect', [EasyLoginController::class, 'handl
 Route::get('/auth/slack-openid/redirect', [EasyLoginController::class, 'handleSlackRedirect'])
     ->name('easy-login.slack');
 
+Route::get('/auth/bitbucket/redirect', [EasyLoginController::class, 'handleBitbucketRedirect'])
+    ->name('easy-login.bitbucket');
+
 Route::get('/auth/azure/redirect', [EasyLoginForAzureController::class, 'handleAzureRedirect'])
     ->name('easy-login.azure');
 
