@@ -30,6 +30,9 @@ Route::get('/auth/slack-openid/redirect', [EasyLoginController::class, 'handleSl
 Route::get('/auth/bitbucket/redirect', [EasyLoginController::class, 'handleBitbucketRedirect'])
     ->name('easy-login.bitbucket');
 
+Route::get('/auth/gitlab/redirect', [EasyLoginController::class, 'handleGitlabRedirect'])
+    ->name('easy-login.gitlab');
+
 Route::get('/auth/azure/redirect', [EasyLoginForAzureController::class, 'handleAzureRedirect'])
     ->name('easy-login.azure');
 

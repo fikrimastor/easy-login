@@ -58,6 +58,7 @@ or
 * easy-login.linkedin
 * easy-login.slack
 * easy-login.bitbucket
+* easy-login.gitlab
 * More to coming!
 
 ## Auth Session

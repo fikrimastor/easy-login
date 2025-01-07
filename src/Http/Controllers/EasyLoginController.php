@@ -68,6 +68,14 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the Gitlab Authentication page
+     */
+    public function handleGitlabRedirect(): RedirectResponse
+    {
+        return Socialite::driver('gitlab')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse
