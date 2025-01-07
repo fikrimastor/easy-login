@@ -24,6 +24,9 @@ Route::get('/auth/twitter/redirect', [EasyLoginController::class, 'handleTwitter
 Route::get('/auth/linkedin-openid/redirect', [EasyLoginController::class, 'handleLinkedinRedirect'])
     ->name('easy-login.linkedin');
 
+Route::get('/auth/slack-openid/redirect', [EasyLoginController::class, 'handleSlackRedirect'])
+    ->name('easy-login.slack');
+
 Route::get('/auth/azure/redirect', [EasyLoginForAzureController::class, 'handleAzureRedirect'])
     ->name('easy-login.azure');
 

@@ -52,6 +52,14 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the Slack Authentication page
+     */
+    public function handleSlackRedirect(): RedirectResponse
+    {
+        return Socialite::driver('slack-openid')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse

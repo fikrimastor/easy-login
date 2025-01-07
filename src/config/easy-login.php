@@ -60,6 +60,15 @@ return [
     ],
 
     /**
+     * Define the Slack OAuth credentials
+     */
+    'slack-openid' => [
+        'client_id' => env('SLACK_CLIENT_ID'),
+        'client_secret' => env('SLACK_CLIENT_SECRET'),
+        'redirect' => env('SLACK_REDIRECT_URL'),
+    ],
+
+    /**
      * Define the default redirect paths
      */
     'redirects' => [
