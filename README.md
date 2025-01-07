@@ -49,13 +49,13 @@ or
 <a href="{{ route('easy-login.azure') }}"> Login via Azure </a>
 ```
 
-
 #### List of pre-defined Route Names
 * easy-login.github
 * easy-login.google
 * easy-login.facebook
 * easy-login.twitter
 * easy-login.azure
+* easy-login.linkedin
 * More to coming!
 
 ## Auth Session

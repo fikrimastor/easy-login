@@ -44,6 +44,14 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the LinkedIn Authentication page
+     */
+    public function handleLinkedinRedirect(): RedirectResponse
+    {
+        return Socialite::driver('linkedin-openid')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse

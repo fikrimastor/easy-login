@@ -21,9 +21,11 @@ Route::get('/auth/facebook/redirect', [EasyLoginController::class, 'handleFacebo
 Route::get('/auth/twitter/redirect', [EasyLoginController::class, 'handleTwitterRedirect'])
     ->name('easy-login.twitter');
 
+Route::get('/auth/linkedin-openid/redirect', [EasyLoginController::class, 'handleLinkedinRedirect'])
+    ->name('easy-login.linkedin');
+
 Route::get('/auth/azure/redirect', [EasyLoginForAzureController::class, 'handleAzureRedirect'])
     ->name('easy-login.azure');
-
 
 /**
  * ==============================
