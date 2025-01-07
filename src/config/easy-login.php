@@ -51,6 +51,42 @@ return [
     ],
 
     /**
+     * Define the LinkedIn OAuth credentials
+     */
+    'linkedin-openid' => [
+        'client_id' => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect' => env('LINKEDIN_REDIRECT_URL'),
+    ],
+
+    /**
+     * Define the Slack OAuth credentials
+     */
+    'slack-openid' => [
+        'client_id' => env('SLACK_CLIENT_ID'),
+        'client_secret' => env('SLACK_CLIENT_SECRET'),
+        'redirect' => env('SLACK_REDIRECT_URL'),
+    ],
+
+    /**
+     * Define the Bitbucket OAuth credentials
+     */
+    'bitbucket' => [
+        'client_id' => env('BITBUCKET_CLIENT_ID'),
+        'client_secret' => env('BITBUCKET_CLIENT_SECRET'),
+        'redirect' => env('BITBUCKET_REDIRECT_URL')
+    ],
+
+    /**
+     * Define the GitLab OAuth credentials
+     */
+    'gitlab' => [
+        'client_id' => env('GITLAB_CLIENT_ID'),
+        'client_secret' => env('GITLAB_CLIENT_SECRET'),
+        'redirect' => env('GITLAB_REDIRECT_URL')
+    ],
+
+    /**
      * Define the default redirect paths
      */
     'redirects' => [

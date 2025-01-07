@@ -44,6 +44,38 @@ class EasyLoginController extends Controller
     }
 
     /**
+     * Redirect user to the LinkedIn Authentication page
+     */
+    public function handleLinkedinRedirect(): RedirectResponse
+    {
+        return Socialite::driver('linkedin-openid')->redirect();
+    }
+
+    /**
+     * Redirect user to the Slack Authentication page
+     */
+    public function handleSlackRedirect(): RedirectResponse
+    {
+        return Socialite::driver('slack-openid')->redirect();
+    }
+
+    /**
+     * Redirect user to the Bitbucket Authentication page
+     */
+    public function handleBitbucketRedirect(): RedirectResponse
+    {
+        return Socialite::driver('bitbucket')->redirect();
+    }
+
+    /**
+     * Redirect user to the Gitlab Authentication page
+     */
+    public function handleGitlabRedirect(): RedirectResponse
+    {
+        return Socialite::driver('gitlab')->redirect();
+    }
+
+    /**
      * Handle application callback after authentication
      */
     public function callback(CallbackServices $callbackServices): RedirectResponse
