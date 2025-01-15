@@ -4,17 +4,14 @@
 Easy Login is a Laravel package designed to simplify OAuth authentication using Laravel Socialite. It provides pre-built success/failed mechanism, routes and streamlined configuration to integrate third-party OAuth providers effortlessly.
 
 ## Installation
-> [!IMPORTANT]
-> Before you install this package, you need to install Laravel Socialite first. Read the [Laravel Socialite Documentation](https://laravel.com/docs/master/socialite)
-
 1. Install the package via Composer
 ```bash
 composer require sulaimanmisri/easy-login
 ```
 
-2. Publish the configuration file:
+2. Run the installation wizard:
 ```bash
-php artisan vendor:publish --tag=easy-login-config
+php artisan easy-login:install
 ```
 
 3. Configure your OAuth credentials in .env. Example:
@@ -27,7 +24,7 @@ GITHUB_REDIRECT_URL=https://your-app.com/auth/{provider}/callback
 > [!IMPORTANT]
 > You should only change the {provider} name to the specific provider that you choose. For example, if you choose `Facebook`, then your Redirect URL should be: `/auth/facebook/callback`
 
-That's it for the installation.
+That's it for the installation. You can use it in your application right now.
 
 ## Usage
 You can modify the post-login redirect paths in the `config/easy-login.php` file:

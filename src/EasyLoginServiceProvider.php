@@ -6,6 +6,7 @@ namespace Sulaimanmisri\EasyLogin;
 
 use RuntimeException;
 use Illuminate\Support\ServiceProvider;
+use SulaimanMisri\EasyLogin\Console\Commands\WizardInstaller;
 
 class EasyLoginServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,13 @@ class EasyLoginServiceProvider extends ServiceProvider
         ], 'easy-login-config');
 
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
+        // Registering the console command
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                WizardInstaller::class,
+            ]);
+        }
     }
 
     /**
