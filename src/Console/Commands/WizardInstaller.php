@@ -8,7 +8,7 @@ use Illuminate\Console\Command;
 
 class WizardInstaller extends Command
 {
-    protected string $signature = 'easy-login:install';
+    protected $signature = 'easy-login:install';
     protected string $description = 'Install EasyLogin and set up necessary files';
 
     /**
