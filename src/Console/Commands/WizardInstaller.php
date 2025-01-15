@@ -9,7 +9,7 @@ use Illuminate\Console\Command;
 class WizardInstaller extends Command
 {
     protected $signature = 'easy-login:install';
-    protected string $description = 'Install EasyLogin and set up necessary files';
+    protected $description = 'Install EasyLogin and set up necessary files';
 
     /**
      * Execute the console command.
