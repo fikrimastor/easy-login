@@ -30,14 +30,14 @@ class WizardInstaller extends Command
     protected function askQuestions(): void
     {
         // Question 1: Install Laravel Socialite
-        if ($this->confirm('Do you want to install Laravel Socialite?', true)) {
+        if ($this->confirm('This package require Laravel Socialite in order to work. Do you want to install Laravel Socialite now?', true)) {
             $this->installSocialite();
         } else {
             $this->line('Skipping Laravel Socialite installation.');
         }
 
         // Question 2: Publish the configuration file
-        if ($this->confirm('Do you want to publish the EasyLogin configuration file?', true)) {
+        if ($this->confirm('Do you want to publish the EasyLogin configuration file now?', true)) {
             $this->publishConfig();
         } else {
             $this->line('Skipping configuration file publishing.');

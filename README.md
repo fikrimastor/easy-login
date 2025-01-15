@@ -4,9 +4,6 @@
 Easy Login is a Laravel package designed to simplify OAuth authentication using Laravel Socialite. It provides pre-built success/failed mechanism, routes and streamlined configuration to integrate third-party OAuth providers effortlessly.
 
 ## Installation
-> [!IMPORTANT]
-> Before you install this package, you need to install Laravel Socialite first. Read the [Laravel Socialite Documentation](https://laravel.com/docs/master/socialite)
-
 1. Install the package via Composer
 ```bash
 composer require sulaimanmisri/easy-login
